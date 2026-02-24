@@ -166,8 +166,13 @@ Accession numbers are provided in Supplementary Table 1 of the manuscript.
 
 If you use this workflow, please cite:
 
-Ascandari A et al.  
-*Threshold dynamics characterize microbiome reorganization during colorectal cancer progression.* (under review)
+Ascandari A et al.
+Threshold dynamics characterize microbiome reorganization during colorectal cancer progression. (under review)
+
+Software archive:
+Ascandari A. MDT-TM_CRC_Microbiome-Framework (v1.0.0). Zenodo.
+https://doi.org/10.5281/zenodo.18760840
+
 
 ---
 
