@@ -31,7 +31,7 @@ Raw SRA Metagenomes
 03_species_ecology/  
 04_Synthetic_blending/  
 
-Each directory corresponds to a major stage of the MDT-TM framework.
+Each directory corresponds to a major stage of the MDT-TM framework. The repository has been numbered to facilitate a stepwise execution of the pipeline.
 
 ---
 
