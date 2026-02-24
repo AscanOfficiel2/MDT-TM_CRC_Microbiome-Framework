@@ -171,11 +171,11 @@ Ascandari A et al.
 # Contact
 
 AbdulAziz Ascandari  
-abdulaziz.ascandari@um6p.ma 
+abdulaziz.ascandari@um6p.ma
 ryandari87@gmail.com
 
 Suleiman Aminu  
-suleiman.aminu@um6p.ma  
+suleiman.aminu@um6p.ma
 saminu83@gmail.com
 
 ---
