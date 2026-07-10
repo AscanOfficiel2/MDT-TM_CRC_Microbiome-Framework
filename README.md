@@ -7,7 +7,7 @@ Genome-resolved workflow implementing Minimal Dominance Threshold–Transition M
 This repository contains the full computational workflow used in:
 
 **Ascandari A, Aminu S, Benhida R, Daoud R.**  
-*Threshold dynamics characterize microbiome reorganization during colorectal cancer progression.*
+*Loss of ecological stability drives threshold-like transitions in the colorectal cancer microbiome.*
 
 The study introduces **Minimal Dominance Threshold – Transition Modeling (MDT-TM)**, a genome-resolved ecological modeling framework that quantifies tipping-point dynamics along the colorectal cancer (CRC) continuum (Healthy → Adenoma → Carcinoma).
 
@@ -167,7 +167,7 @@ Accession numbers are provided in Supplementary Table 1 of the manuscript.
 If you use this workflow, please cite:
 
 Ascandari A et al.
-Threshold dynamics characterize microbiome reorganization during colorectal cancer progression. (under review)
+Loss of ecological stability drives threshold-like transitions in the colorectal cancer microbiome. (under review)
 
 Software archive:
 Ascandari A. MDT-TM_CRC_Microbiome-Framework (v1.0.0). Zenodo.
