@@ -8,9 +8,9 @@ Original file is located at
 """
 
 # ============================================================
-# CRC Biosurveillance-Style MDT Pipeline (FINAL, CORRECTED)
+# CRC Biosurveillance-Style MDT Pipeline
 # Healthy → Adenoma → Cancer
-# SVM-based, NaN-safe, publication-ready
+# SVM-based
 # ============================================================
 
 import numpy as np
@@ -88,7 +88,7 @@ model = Pipeline([
 model.fit(X, y)
 
 # ============================================================
-# Color palette (AS REQUESTED)
+# Color palette
 # ============================================================
 
 palette = {
@@ -197,7 +197,7 @@ entropy_df.to_csv("CRC_MDT_Entropy.csv", index=False)
 mdt_df.to_csv("CRC_MDT_Table.csv", index=False)
 
 # ============================================================
-# (a) Dose–response curves (LEGENDS FIXED)
+# (a) Dose–response curves
 # ============================================================
 
 for rec, donors in transitions.items():
@@ -244,7 +244,7 @@ for rec, donors in transitions.items():
     plt.show()
 
 # ============================================================
-# (c) SHANNON ENTROPY CURVES — CORRECT (MATCHES OLD PIPELINE)
+# (c) SHANNON ENTROPY CURVES
 # ============================================================
 
 max_entropy = np.log2(len(classes))
@@ -291,7 +291,7 @@ for _, row in mdt_df.dropna().iterrows():
         label="Max entropy"
     )
 
-    # 🔑 MDT vertical line (THIS WAS MISSING)
+    # MDT vertical line
     if not np.isnan(mdt):
         ax.axvline(
             mdt,
@@ -322,7 +322,7 @@ for _, row in mdt_df.dropna().iterrows():
     plt.show()
 
 # ============================================================
-# (b) MDT heatmap (correct colormap)
+# (b) MDT heatmap 
 # ============================================================
 
 hm = mdt_df.pivot(index="Recipient", columns="Donor", values="MDT")
@@ -358,8 +358,8 @@ plt.savefig("Figure_CRC_Dominance_Matrix.png", dpi=600)
 plt.show()
 
 # ============================================================
-# (★) Driving species at MDT − ε using directional perturbation
-# SVM-compatible, publication-ready
+# Driving species at MDT − ε using directional perturbation
+# SVM-compatible
 # ============================================================
 
 delta = 0.05            # small CLR perturbation
