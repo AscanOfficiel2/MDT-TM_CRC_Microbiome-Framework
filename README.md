@@ -93,7 +93,7 @@ Directories and scripts are numbered to indicate the intended execution order. I
 
 ---
 
-# 01_Bioninformatics
+# 01_Bioinformatics
 
 Genome-resolved metagenomic reconstruction.
 
