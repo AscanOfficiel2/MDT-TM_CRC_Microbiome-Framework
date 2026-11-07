@@ -11,30 +11,85 @@ This repository contains the full computational workflow used in:
 
 The study introduces **Minimal Dominance Threshold – Transition Modeling (MDT-TM)**, a genome-resolved ecological modeling framework that quantifies tipping-point dynamics along the colorectal cancer (CRC) continuum (Healthy → Adenoma → Carcinoma).
 
----
 
-# Analytical Workflow
+## Analytical Workflow
 
-Raw SRA Metagenomes  
-        ↓  
-01_Bioninformatics (Assembly → Binning → Dereplication → Taxonomy → Species matrix)  
-        ↓  
-02_Preprocessing (Quality control → Coverage → Metadata harmonization)  
-        ↓  
-03_species_ecology (CLR → Alpha/Beta diversity → Indicators → Prevalence)  
-        ↓  
-04_Synthetic_blending (Observer model → Blending → MDT → Instability → MaAsLin3)
+```mermaid
+flowchart TB
+    INPUT["Public SRA metagenomes"]
 
----
+    subgraph BIO["01 · Genome-resolved bioinformatics"]
+        direction TB
+        B1["Assembly and binning"]
+        B2["MAG dereplication and taxonomy"]
+        B3["Abundance estimation and species mapping"]
+        B1 --> B2 --> B3
+    end
 
-# Repository Structure
+    subgraph PRE["02 · Quality control and preprocessing"]
+        direction TB
+        P1["MAG and assembly quality assessment"]
+        P2["Contamination screening and coverage assessment"]
+        P3["Profile cleanup and metadata harmonization"]
+        P1 --> P2 --> P3
+    end
 
-01_Bioninformatics/  
-02_Preprocessing/  
-03_species_ecology/  
-04_Synthetic_blending/  
+    DATA["Species abundance matrix and harmonized metadata"]
 
-Each directory corresponds to a major stage of the MDT-TM framework. The modules as well as the scripts have been numbered to facilitate a stepwise execution of the pipeline.
+    subgraph ECO["03 · Species ecology"]
+        direction TB
+        E1["Species matrix processing"]
+        E2["CLR transformation and batch correction"]
+        E3["Alpha diversity"]
+        E4["Beta diversity and community structure"]
+        E5["Indicator species and prevalence"]
+        E1 --> E2
+        E1 --> E3
+        E2 --> E4
+        E1 --> E5
+    end
+
+    subgraph MDT["04 · MDT-TM transition modeling"]
+        direction TB
+        M1["Model benchmarking and SVM observer"]
+        M2["Synthetic disease-signal blending"]
+        M3["MDT estimation and instability profiling"]
+        M4["Directional perturbation analysis"]
+        M5["MDT-based stratification and MaAsLin3"]
+        M1 --> M2 --> M3
+        M3 --> M4
+        M3 --> M5
+    end
+
+    INPUT --> B1
+    B3 --> P1
+    P3 --> DATA
+    DATA --> E1
+    E2 --> M1
+
+    classDef input fill:#eff6ff,stroke:#2563eb,color:#172554;
+    classDef ecological fill:#ecfdf5,stroke:#059669,color:#064e3b;
+    classDef modeling fill:#faf5ff,stroke:#9333ea,color:#581c87;
+
+    class INPUT,DATA input;
+    class E1,E2,E3,E4,E5 ecological;
+    class M1,M2,M3,M4,M5 modeling;
+```
+
+*This diagram summarizes the analytical stages. Consult individual scripts and the manuscript Methods for input requirements and the data representation used in each analysis.*
+
+## Repository Structure
+
+```text
+MDT-TM_CRC_Microbiome-Framework/
+├── 01_Bioninformatics/
+├── 02_Preprocessing/
+├── 03_species_ecology/
+└── 04_Synthetic_blending/
+```
+
+Directories and scripts are numbered to indicate the intended execution order. Individual scripts may require outputs from earlier stages.
+
 
 ---
 
