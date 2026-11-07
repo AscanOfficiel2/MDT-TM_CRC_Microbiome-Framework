@@ -225,7 +225,6 @@ Accession numbers are provided in Supplementary Table 1 of the manuscript.
 # Citation
 
 If you use this workflow, please cite:
-
 Ascandari A et al.
 Modeling ecological resistance and threshold-like transitions in the colorectal cancer microbiome. (under review)
 
