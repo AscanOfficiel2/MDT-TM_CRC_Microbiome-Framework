@@ -238,13 +238,9 @@ https://doi.org/10.5281/zenodo.18760840
 
 # Contact
 
-AbdulAziz Ascandari  
-abdulaziz.ascandari@um6p.ma  
-ryandari87@gmail.com
+AbdulAziz Ascandari : abdulaziz.ascandari@um6p.ma/ ryandari87@gmail.com
 
-Suleiman Aminu  
-suleiman.aminu@um6p.ma  
-saminu83@gmail.com
+Suleiman Aminu : suleiman.aminu@um6p.ma/ saminu83@gmail.com
 
 ---
 
