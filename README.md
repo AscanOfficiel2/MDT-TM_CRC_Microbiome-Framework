@@ -120,14 +120,19 @@ Scripts include:
 - 02_feature_importance.py  
 - 03_blending_species.py  
 - 04_metadata_threshold_mdt.py  
-- 05_maaslin3_analysis.R  
+- 05_maaslin3_analysis.R
+- LOCO_SVM.ipynb
+- Sensitivity_analysis_MDT.ipynb
 
 Implements:
 
-- SVM observer model training  
+- SVM observer model training
+- Leave-one-cohort-out validation of the SVM model using CLR batch-corrected and non-batch-corrected matrix
 - Synthetic disease-signal blending  
-- Minimal Dominance Threshold (MDT) estimation  
-- Shannon entropy instability profiling  
+- Minimal Dominance Threshold (MDT) estimation
+- Sensitivity analysis of the MDT threshold stability
+- Shannon entropy instability profiling
+- Sensitivity analysis of the Shannon entropy instability at different set thresholds
 - Directional perturbation analysis  
 - MDT-based sample stratification  
 - MaAsLin3 differential abundance testing  
