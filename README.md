@@ -167,10 +167,10 @@ Accession numbers are provided in Supplementary Table 1 of the manuscript.
 If you use this workflow, please cite:
 
 Ascandari A et al.
-Loss of ecological stability drives threshold-like transitions in the colorectal cancer microbiome. (under review)
+Modeling ecological resistance and threshold-like transitions in the colorectal cancer microbiome. (under review)
 
 Software archive:
-Ascandari A. MDT-TM_CRC_Microbiome-Framework (v1.0.0). Zenodo.
+Ascandari A. MDT-TM_CRC_Microbiome-Framework (v2.0). Zenodo.
 https://doi.org/10.5281/zenodo.18760840
 
 
