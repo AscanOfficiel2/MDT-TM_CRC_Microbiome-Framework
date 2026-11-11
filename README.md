@@ -2,12 +2,12 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18760840.svg)](https://doi.org/10.5281/zenodo.18760840)
 
-Genome-resolved workflow implementing Minimal Dominance Threshold–Transition Modeling (MDT-TM) to quantify tipping-point dynamics in colorectal cancer microbiome progression.
+Genome-resolved workflow implementing Minimal Dominance Threshold–Transition Modeling (MDT-TM) to quantify tipping-point dynamics in colorectal cancer microbiome progression. This workflow build on and extends the GRUMB framework.
 
 This repository contains the full computational workflow used in:
 
 **Ascandari A, Aminu S, Benhida R, Daoud R.**  
-*Modeling ecological resistance and threshold-like transitions in the colorectal cancer microbiome.*
+*Modeling compositional perturbations and predicted state transitions in the colorectal cancer microbiome.*
 
 The study introduces **Minimal Dominance Threshold – Transition Modeling (MDT-TM)**, a genome-resolved ecological modeling framework that quantifies tipping-point dynamics along the colorectal cancer (CRC) continuum (Healthy → Adenoma → Carcinoma).
 
@@ -226,7 +226,7 @@ Accession numbers are provided in Supplementary Table 1 of the manuscript.
 
 If you use this workflow, please cite:
 Ascandari A et al.
-Modeling ecological resistance and threshold-like transitions in the colorectal cancer microbiome. (under review).
+Modeling compositional perturbations and predicted state transitions in the colorectal cancer microbiome. (under review).
 
 Software archive: Zenodo: https ://doi.org/10.5281/zenodo.18760840
 
