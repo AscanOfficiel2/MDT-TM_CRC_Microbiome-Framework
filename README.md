@@ -1,6 +1,6 @@
 # 🧬 MDT-TM_CRC_Microbiome-Framework
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24159128.svg)](https://doi.org/110.5281/zenodo.24159128)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24159128.svg)](https://doi.org/10.5281/zenodo.24159128)
 
 Genome-resolved workflow implementing Minimal Dominance Threshold–Transition Modeling (MDT-TM) to investigate threshold-like changes in predicted microbiome states under simulated compositional perturbations across the colorectal cancer (CRC) continuum. This workflow builds on and extends the GRUMB framework.
 
