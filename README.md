@@ -95,7 +95,7 @@ Directories and scripts are numbered to indicate the intended execution order. I
 
 ---
 
-# 01_Bioinformatics
+# 01 Bioinformatics
 
 **Genome-resolved metagenomic reconstruction.**
 
@@ -121,7 +121,7 @@ Implements:
 
 ---
 
-#  02_Preprocessing
+#  02 Preprocessing
 
 **Quality control and harmonization.**
 
@@ -144,7 +144,7 @@ Implements:
 
 ---
 
-# 03_species_ecology
+# 03 species_ecology
 
 **Baseline ecological characterization.**
 
@@ -167,7 +167,7 @@ Implements:
 
 ---
 
-# 04_Synthetic_blending
+# 04 Synthetic blending
 
 **Minimal Dominance Threshold – Transition Modeling (MDT-TM)**
 
