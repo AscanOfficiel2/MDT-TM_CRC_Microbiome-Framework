@@ -97,7 +97,7 @@ Directories and scripts are numbered to indicate the intended execution order. I
 
 # 01_Bioinformatics
 
-Genome-resolved metagenomic reconstruction.
+**Genome-resolved metagenomic reconstruction.**
 
 Scripts include:
 
@@ -123,7 +123,7 @@ Implements:
 
 #  02_Preprocessing
 
-Quality control and harmonization.
+**Quality control and harmonization.**
 
 Scripts include:
 
@@ -146,7 +146,7 @@ Implements:
 
 # 03_species_ecology
 
-Baseline ecological characterization.
+**Baseline ecological characterization.**
 
 Scripts include:
 
@@ -169,30 +169,33 @@ Implements:
 
 # 04_Synthetic_blending
 
-Minimal Dominance Threshold – Transition Modeling (MDT-TM)
+**Minimal Dominance Threshold – Transition Modeling (MDT-TM)**
 
 Scripts include:
 
-- 01_species_benchmark.py  
-- 02_feature_importance.py  
-- 03_blending_species.py  
-- 04_metadata_threshold_mdt.py  
-- 05_maaslin3_analysis.R
-- LOCO_SVM.ipynb
-- Sensitivity_analysis_MDT.ipynb
+- 01_species_benchmark.py
+- 02_feature_importance.py
+- 03_LOCO_SVM.ipynb
+- 04_blending_species.py
+- 04_metadata_threshold_mdt.py
+- 05_Sensitivity_analysis_MDT_1.ipynb
+- 06_Species_stability_MDT_uncertainty.py
+- 07_maaslin3_analysis.R
 
 Implements:
 
 - SVM observer model training
-- Leave-one-cohort-out validation of the SVM model using CLR batch-corrected and non-batch-corrected matrix
-- Synthetic disease-signal blending  
+- Leave-one-cohort-out validation of the SVM model using CLR batch-corrected and non-batch-corrected matrices
+- Synthetic compositional blending between microbiome states
 - Minimal Dominance Threshold (MDT) estimation
-- Sensitivity analysis of the MDT threshold stability
-- Shannon entropy instability profiling
-- Sensitivity analysis of the Shannon entropy instability at different set thresholds
-- Directional perturbation analysis  
-- MDT-based sample stratification  
-- MaAsLin3 differential abundance testing  
+- Sensitivity analysis of MDT estimates using alternative donor-dominance criteria and blending resolutions
+- Shannon prediction entropy and model-derived instability width
+- Sensitivity analysis of prediction entropy relative to MDT
+- MDT uncertainty and transition-ordering stability across repeated simulations
+- Directional species perturbation analysis near MDT
+- Species influence-ranking stability across 30 independent simulations
+- Cancer-probability-based sample grouping
+- Exploratory MaAsLin3 differential abundance and prevalence analyses
 
 ---
 
@@ -228,12 +231,14 @@ Accession numbers are provided in Supplementary Table 1 of the manuscript.
 
 If you use this workflow, please cite:
 Ascandari A et al.
-Modeling compositional perturbations and predicted state transitions in the colorectal cancer microbiome. (under review).
+*Modeling compositional perturbations and predicted state transitions in the colorectal cancer microbiome. (under review).*
 
-Software archive: Zenodo: https ://doi.org/10.5281/zenodo.18760840
+*Software archive: Zenodo: https ://doi.org/10.5281/zenodo.18760840*
 
 ---
 
 # License
 
-Released for academic research use. Please cite appropriately when reusing the framework or scripts.
+This project is licensed under the MIT License. It is freely available for academic research and other uses in accordance with the license terms.
+
+Please cite the associated publication when reusing or adapting the MDT-TM framework or its scripts.
