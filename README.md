@@ -144,7 +144,7 @@ Implements:
 
 ---
 
-# 03 species_ecology
+# 03 species ecology
 
 **Baseline ecological characterization.**
 
