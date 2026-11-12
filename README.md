@@ -2,14 +2,14 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18760840.svg)](https://doi.org/10.5281/zenodo.18760840)
 
-Genome-resolved workflow implementing Minimal Dominance Threshold–Transition Modeling (MDT-TM) to quantify tipping-point dynamics in colorectal cancer microbiome progression. This workflow builds on and extends the GRUMB framework.
+Genome-resolved workflow implementing Minimal Dominance Threshold–Transition Modeling (MDT-TM) to investigate threshold-like changes in predicted microbiome states under simulated compositional perturbations across the colorectal cancer (CRC) continuum. This workflow builds on and extends the GRUMB framework.
 
 This repository contains the full computational workflow used in:
 
-**Ascandari A, Aminu S, Benhida R, Daoud R.**  
+**Ascandari A, Aminu S, Benhida R, Daoud R.**
 *Modeling compositional perturbations and predicted state transitions in the colorectal cancer microbiome.*
 
-The study introduces **Minimal Dominance Threshold – Transition Modeling (MDT-TM)**, a genome-resolved ecological modeling framework that quantifies tipping-point dynamics along the colorectal cancer (CRC) continuum (Healthy → Adenoma → Carcinoma).
+The study introduces **Minimal Dominance Threshold–Transition Modeling (MDT-TM)**, a genome-resolved computational framework for estimating model-derived dominance thresholds, characterizing prediction uncertainty, and identifying taxa influencing predicted community-state transitions across healthy, adenoma, and carcinoma microbiome profiles.
 
 
 ## Analytical Workflow
@@ -18,20 +18,22 @@ The study introduces **Minimal Dominance Threshold – Transition Modeling (MDT-
 flowchart TB
     INPUT["Public SRA metagenomes"]
 
-    subgraph BIO["01 · Genome-resolved bioinformatics"]
+    subgraph PRE["01 · Read preprocessing"]
         direction TB
-        B1["Assembly and binning"]
-        B2["MAG dereplication and taxonomy"]
-        B3["Abundance estimation and species mapping"]
-        B1 --> B2 --> B3
+        P1["Read quality filtering"]
+        P2["Contamination screening"]
+        P3["Sequencing coverage assessment"]
+        P1 --> P2 --> P3
     end
 
-    subgraph PRE["02 · Quality control and preprocessing"]
+    subgraph BIO["02 · Genome-resolved bioinformatics"]
         direction TB
-        P1["MAG and assembly quality assessment"]
-        P2["Contamination screening and coverage assessment"]
-        P3["Profile cleanup and metadata harmonization"]
-        P1 --> P2 --> P3
+        B1["De novo assembly"]
+        B2["Contig binning"]
+        B3["MAG quality assessment"]
+        B4["Dereplication and taxonomy"]
+        B5["Species abundance estimation"]
+        B1 --> B2 --> B3 --> B4 --> B5
     end
 
     DATA["Species abundance matrix and harmonized metadata"]
@@ -42,7 +44,7 @@ flowchart TB
         E2["CLR transformation and batch correction"]
         E3["Alpha diversity"]
         E4["Beta diversity and community structure"]
-        E5["Indicator species and prevalence"]
+        E5["Prevalence and indicator species"]
         E1 --> E2
         E1 --> E3
         E2 --> E4
@@ -51,29 +53,29 @@ flowchart TB
 
     subgraph MDT["04 · MDT-TM transition modeling"]
         direction TB
-        M1["Model benchmarking and SVM observer"]
-        M2["Synthetic disease-signal blending"]
-        M3["MDT estimation and instability profiling"]
-        M4["Directional perturbation analysis"]
-        M5["MDT-based stratification and MaAsLin3"]
-        M1 --> M2 --> M3
-        M3 --> M4
-        M3 --> M5
+        M1["Classifier benchmarking and SVM observer"]
+        M2["Synthetic compositional blending"]
+        M3["MDT estimation and prediction entropy"]
+        M4["Species perturbation and rank stability"]
+        M5["Cancer-probability grouping and MaAsLin3"]
+        M1 --> M2 --> M3 --> M4
+        M1 --> M5
     end
 
-    INPUT --> B1
-    B3 --> P1
-    P3 --> DATA
+    INPUT --> P1
+    P3 --> B1
+    B5 --> DATA
     DATA --> E1
     E2 --> M1
 
-    classDef input fill:#eff6ff,stroke:#2563eb,color:#172554;
-    classDef ecological fill:#ecfdf5,stroke:#059669,color:#064e3b;
-    classDef modeling fill:#faf5ff,stroke:#9333ea,color:#581c87;
+    classDef input fill:#eff6ff,stroke:#2563eb,color:#172554
+    classDef ecological fill:#ecfdf5,stroke:#059669,color:#064e3b
+    classDef modeling fill:#faf5ff,stroke:#9333ea,color:#581c87
 
-    class INPUT,DATA input;
-    class E1,E2,E3,E4,E5 ecological;
-    class M1,M2,M3,M4,M5 modeling;
+    class INPUT,DATA input
+    class E1,E2,E3,E4,E5 ecological
+    class M1,M2,M3,M4,M5 modeling
+
 ```
 
 *This diagram summarizes the analytical stages. Consult individual scripts and the manuscript Methods for input requirements and the data representation used in each analysis.*
